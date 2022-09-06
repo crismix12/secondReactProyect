@@ -6,7 +6,7 @@
 }
 
 .App{
-  background-color: red;
+  /* background-color: red; */
   display: flex;
   height: calc(100vh);
   align-items: center;
