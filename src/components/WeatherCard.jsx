@@ -34,8 +34,8 @@ const WeatherCard = () => {
         .get(`https://api.openweathermap.org/data/2.5/weather?lat=${crd.latitude}&lon=${crd.longitude}&appid=31fb8580c76fe83c63502c5bfebcb631`)
             .then(res => {
                 setApiResponse(res.data)
-                setApiTime(shiftSecconds(res.timezone))
-                // shiftSecconds(res.timezone)
+                // setApiTime(shiftSecconds(res.timezone))
+                shiftSecconds(res.timezone)
                 // shiftSecconds(res.timezone)
             
             })
@@ -57,7 +57,8 @@ const WeatherCard = () => {
         // console.log(d);
         // return setApiTime(d);
         // setApiTime(d);
-        return d;
+        setApiTime(d);
+        // return d;
     })   
     // const shiftSecconds = (() => {
     //     // let d = new Date((new Date().getTime())-(timezone + 14404)*1000);
