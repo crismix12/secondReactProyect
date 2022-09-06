@@ -1,12 +1,11 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  /* padding: 2rem; */
   text-align: center;
 }
 
+
 .App{
-  /* background-color: red; */
   display: flex;
   height: calc(100vh);
   align-items: center;
@@ -14,15 +13,17 @@
 }
 
 .weatherCard{
-  background-color: whitesmoke;
+  border: 1px solid black;
+  box-shadow: 2px 2px 8px rgba(76, 76, 76, 0.8);
+  background-color: transparent;
   min-width: 300px;
   padding: 1rem;
   border-radius: 1rem;
 }
 
 .weatherCard-icon{
-  width: 130px;
-  height: 130px;
+  width: 80px;
+  height: 80px;
 }
 
 
@@ -33,4 +34,17 @@
 
 .weather-list li{
   list-style: none;
+  color: greenyellow;
+}
+
+.tempBtn{
+  background-color: purple;
+  color: greenyellow;
+  font-size: 18px;
+  border-radius: 1em;
+}
+
+.tempText{
+  font-size: 22px;
+  color: whitesmoke;
 }
