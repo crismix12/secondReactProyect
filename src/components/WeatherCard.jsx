@@ -17,11 +17,13 @@ const WeatherCard = () => {
         axios
         .get(`https://api.openweathermap.org/data/2.5/weather?lat=${crd.latitude}&lon=${crd.longitude}&appid=31fb8580c76fe83c63502c5bfebcb631`)
             .then(res => {
+                // console.log(res)
                 setWeather({
                     city: res.data.name,
                     country: res.data.sys.country,
                     icon: res.data.weather[0].icon,
                     description: res.data.weather[0].description,
+                    weatherId: res.data.weather[0].id.toString(),
                     humidity: res.data.main.humidity,
                     pressure: res.data.main.pressure,
                     windSpeed: res.data.wind.speed,
@@ -37,7 +39,7 @@ const WeatherCard = () => {
     
     return (
         <div className='weatherCard'>
-            <RenderWeatherData city ={weather.city} country = {weather.country} icon = {weather.icon} description = {weather.description} humidity = {weather.humidity} pressure = {weather.pressure} windSpeed = {weather.windSpeed} clouds = {weather.clouds} temperatureC = {weather.temperatureC} temperatureF = {weather.temperatureF}/>
+            <RenderWeatherData city ={weather.city} country = {weather.country} icon = {weather.icon} description = {weather.description} weatherId={weather.weatherId} humidity = {weather.humidity} pressure = {weather.pressure} windSpeed = {weather.windSpeed} clouds = {weather.clouds} temperatureC = {weather.temperatureC} temperatureF = {weather.temperatureF}/>
         </div>
     );
 };
