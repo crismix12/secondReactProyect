@@ -19,6 +19,8 @@ const RenderWeatherData = ({city, country, icon, description, humidity, pressure
             setBackground('https://img.freepik.com/free-photo/scattered-clouds-blue-sky_23-2148824961.jpg?w=2000')
         }else if(description ==="broken clouds"){
             setBackground("https://drscdn.500px.org/photo/207699803/m%3D900/17924413051b7334ab34b58a534a476e")
+        }else if(description ==="overcast clouds"){
+            setBackground("https://drscdn.500px.org/photo/207699803/m%3D900/17924413051b7334ab34b58a534a476e")
         }else if(description ==="rain"){
             setBackground("https://i.pinimg.com/originals/20/0e/08/200e0847167f87449c866fb2910b0b14.jpg")
         }else if(description === "thunderstorm"){
